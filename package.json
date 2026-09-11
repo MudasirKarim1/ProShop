@@ -1,0 +1,35 @@
+{
+  "name": "proshop",
+  "version": "1.0.0",
+  "description": "eCommerce Platform build with MERN stack",
+  "homepage": "https://github.com/MudasirKarim1/ProShop#readme",
+  "bugs": {
+    "url": "https://github.com/MudasirKarim1/ProShop/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MudasirKarim1/ProShop.git"
+  },
+  "license": "MIT",
+  "author": "Muhammad Mudasir Karim",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder.js",
+    "data:destroy": "node backend/seeder.js -d"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.9.4"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5",
+    "dotenv": "^17.4.2",
+    "nodemon": "^3.1.14"
+  }
+}
