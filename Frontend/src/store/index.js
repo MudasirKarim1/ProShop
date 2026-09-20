@@ -1,6 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { apiSlice } from "./slices/apiSlices";
-import { useGetProductsQuery } from "./slices/productSlices";
 import cartReducer from "./slices/cartSlice";
 
 const store = configureStore({
@@ -14,4 +13,3 @@ const store = configureStore({
 });
 
 export default store;
-export { store, useGetProductsQuery };
